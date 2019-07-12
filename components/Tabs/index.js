@@ -13,7 +13,7 @@ const topics = document.querySelector('.topics')
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
     .then(data => {
         objectData = data.data.topics;
-             console.log(objectData)
+        console.log(objectData)
         objectData.forEach((language) => {
             const element = createTabs(language);
             topics.appendChild(element);
